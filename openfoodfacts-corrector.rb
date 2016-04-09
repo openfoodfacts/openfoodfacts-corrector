@@ -37,7 +37,7 @@ def fix_mother_brand(child_brand, mother_brand)
     # 3. Fetch full products data
     products_to_check.map do |product|
       full_product = Openfoodfacts::Product.get(product.code)
-      
+
       puts "- *******"
       puts "- Product #{full_product.code} : #{full_product.product_name}"
       puts "- Web: #{full_product.weburl} - API: #{full_product.url}"
@@ -56,7 +56,7 @@ def fix_mother_brand(child_brand, mother_brand)
     puts "- #{products_to_check.length} product(s) to check"
     puts "- #{(products_to_check.length.to_f / child_brand_products.length * 100).round(2)}% products ratio to check"
     puts "- **************"
-    
+
     products_to_check
   end
 end
