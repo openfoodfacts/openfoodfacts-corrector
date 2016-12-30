@@ -20,7 +20,7 @@ MOTHER_BRANDS = {
 def brand_from_name(name)
   Openfoodfacts::Brand.new(
     'name' => name,
-    'url' => "http://world.openfoodfacts.org/brand/#{openfoodfacts_slug(name)}"
+    'url' => "https://world.openfoodfacts.org/brand/#{openfoodfacts_slug(name)}"
   )
 end
 
